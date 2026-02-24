@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.csc325_feb23.HelloController"
+            prefWidth="1100"
+            prefHeight="700"
+            styleClass="borderPane">
+
+    <padding>
+        <Insets bottom="10"/>
+    </padding>
+
+    <top>
+        <MenuBar>
+            <Menu text="File"></Menu>
+            <Menu text="Edit"></Menu>
+            <Menu text="Theme"></Menu>
+            <Menu text="Help"></Menu>
+        </MenuBar>
+    </top>
+
+    <bottom>
+        <MenuBar styleClass="menuBar" prefHeight="30">
+            <Menu text=" "/>
+        </MenuBar>
+
+    </bottom>
+
+    <right>
+        <VBox prefWidth="280" styleClass="panel" spacing="10">
+            <padding>
+                <Insets top="10" left="10" right="10" bottom="10"/>
+            </padding>
+
+            <TextField fx:id="firstNameField" promptText="First Name"/>
+            <TextField fx:id="lastNameField" promptText="Last Name"/>
+            <TextField fx:id="departmentField" promptText="Department"/>
+            <TextField fx:id="majorField" promptText="Major"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="imageURLField" promptText="ImageURL"/>
+
+            <Button fx:id="saveButton" text="Save" onAction="#handleSave"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <VBox prefWidth="280" styleClass="panel" spacing ="20">
+                <Button text="Clear" prefWidth="260" prefHeight="50" onAction="#handleClear"/>
+                <Button text="Add" prefWidth="260" prefHeight="50" onAction="#handleAdd"/>
+                <Button text="Delete" prefWidth="260" prefHeight="50" onAction="#handleDelete"/>
+                <Button text="Edit" prefWidth="260" prefHeight="50" onAction="#handleEdit"/>
+
+            </VBox>
+
+        </VBox>
+
+    </right>
+
+    <left>
+        <VBox alignment="TOP_CENTER">
+
+            <padding>
+                <Insets left="10" top="15" right="10"/>
+            </padding>
+
+            <ImageView fx:id="profileImageView" fitWidth="160" preserveRatio="true">
+                <image>
+                    <Image url="@images/profile pic.png"/>
+                </image>
+            </ImageView>
+
+        </VBox>
+
+    </left>
+
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="firstNameColumn" text="First Name"/>
+                <TableColumn fx:id="lastNameColumn" text="Last Name"/>
+                <TableColumn fx:id="departmentColumn" text="Department"/>
+                <TableColumn fx:id="majorColumn" text="Major"/>
+                <TableColumn fx:id="emailColumn" text="Email"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

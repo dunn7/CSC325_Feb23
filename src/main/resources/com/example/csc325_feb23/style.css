@@ -1,0 +1,26 @@
+.menu-bar{
+    -fx-background-color: saddlebrown;
+}
+
+.menuBar{
+    -fx-background-color: gray;
+}
+
+.panel{
+    -fx-background-color: lime;
+}
+
+.button{
+    -fx-background-radius: 10;
+    -fx-background-color: sienna;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+}
+
+.borderPane{
+    -fx-background-color: sienna;
+}
+
+.table-view .column-header {
+    -fx-background-color: gray;
+}
